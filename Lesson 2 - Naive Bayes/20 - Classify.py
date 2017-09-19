@@ -17,5 +17,19 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     ### this is slightly different than the example, 
     ### where we just print the accuracy
     ### you might need to import an sklearn module
+    
+    
+    # Solution
+    correct = 0
+    for i in range(len(pred)):
+        if pred[i] == labels_test[i]:
+            correct += 1
+            
+    accuracy = correct * 1.0 / len(pred)
+    
+    
+    # Another solution using score function
     accuracy = clf.score(features_test, labels_test)
+    
+    
     return accuracy
