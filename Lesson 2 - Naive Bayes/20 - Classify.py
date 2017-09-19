@@ -28,7 +28,7 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     accuracy = correct * 1.0 / len(pred)
     
     
-    # Another solution using score function
+    # Another solution using score function # Same result
     accuracy = clf.score(features_test, labels_test)
     
     
